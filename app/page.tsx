@@ -140,7 +140,7 @@ export default function PowerMikeHotelLanding() {
               <span className="block text-gray-800">POWER MIKE</span>
             </h1>
             <p className="text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Where Comfort Meets Style and Exceptional Service Elevates Every Experience in Nigeria's Capital
+              Where Comfort Meets Style and Exceptional Service Elevates Every Experience in Nigeria&apos;s Capital
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
@@ -243,7 +243,7 @@ export default function PowerMikeHotelLanding() {
                     <div>
                       <h3 className="text-2xl font-semibold mb-3 text-black">Prime Location</h3>
                       <p className="text-gray-800 leading-relaxed">
-                        Strategically located in Abuja's CBD, minutes away from government offices, shopping centers,
+                        Strategically located in Abuja&apos;s CBD, minutes away from government offices, shopping centers,
                         and major attractions.
                       </p>
                     </div>
@@ -421,7 +421,7 @@ export default function PowerMikeHotelLanding() {
                         <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-800 mb-6 italic text-lg leading-relaxed">"{testimonial.review}"</p>
+                    <p className="text-gray-800 mb-6 italic text-lg leading-relaxed">&quot;{testimonial.review}&quot;</p>
                     <div>
                       <p className="font-semibold text-black text-lg">{testimonial.name}</p>
                       <p className="text-sm text-gray-800/70">{testimonial.role}</p>
@@ -439,7 +439,7 @@ export default function PowerMikeHotelLanding() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-5xl font-bold text-black mb-6 tracking-tight">Perfect Location in Abuja</h2>
-                <p className="text-xl text-gray-800">Centrally located in the heart of Nigeria's capital city</p>
+                <p className="text-xl text-gray-800">Centrally located in the heart of Nigeria&apos;s capital city</p>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -499,7 +499,7 @@ export default function PowerMikeHotelLanding() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-5xl font-bold mb-6 tracking-tight">Ready to Experience Luxury?</h2>
             <p className="text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-gray-50">
-              Book your stay at Power Mike Hotel Abuja today and discover why we're the preferred choice for discerning
+              Book your stay at Power Mike Hotel Abuja today and discover why we&apos;re the preferred choice for discerning
               travelers.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -538,7 +538,7 @@ export default function PowerMikeHotelLanding() {
                   </div>
                 </div>
                 <p className="text-gray-50 mb-6 leading-relaxed">
-                  Experience luxury and comfort in the heart of Nigeria's capital city.
+                  Experience luxury and comfort in the heart of Nigeria&apos;s capital city.
                 </p>
                 <div className="flex space-x-4">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
