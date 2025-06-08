@@ -78,26 +78,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#dining"
-                  className="text-white/80 hover:text-yellow-500 transition-colors"
-                >
-                  Dining
-                </a>
-              </li>
-              <li>
-                <a
                   href="#amenities"
                   className="text-white/80 hover:text-yellow-500 transition-colors"
                 >
                   Amenities
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#booking"
-                  className="text-white/80 hover:text-yellow-500 transition-colors"
-                >
-                  Booking
                 </a>
               </li>
             </ul>
@@ -109,20 +93,28 @@ const Footer = () => {
               <li className="flex items-start">
                 <span className="mr-2">📍</span>
                 <span className="text-white/80">
-                  123 Luxury Boulevard
+                  Area 1, 9 argungu close,
                   <br />
-                  Downtown District
+                  off Benue Cres,
                   <br />
-                  New York, NY 10001
+                  Garki, Abuja
                 </span>
+              </li>{" "}
+              <li className="flex items-center">
+                <span className="mr-2">📞</span>
+                <span className="text-white/80">+234 703 944 8131</span>
               </li>
               <li className="flex items-center">
                 <span className="mr-2">📞</span>
-                <span className="text-white/80">+1 (555) 123-4567</span>
+                <span className="text-white">+234 703 590 1868</span>
               </li>
               <li className="flex items-center">
                 <span className="mr-2">✉️</span>
-                <span className="text-white/80">info@powermike.com</span>
+                <span className="text-white/80">
+                  <a href="mailto:powermikeguesthouse@gmail.com">
+                    powermikeguesthouse@gmail
+                  </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -151,7 +143,10 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Power Mike Hotel. All rights
-            reserved.
+            reserved | Powered by{" "}
+            <a href="https://omarandblasius.com.ng/" className="underline">
+              Omar and Blasius Ltd
+            </a>
           </p>
           <div className="flex space-x-6">
             <a

@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <OverviewSection />
       <RoomsSection />
-      <DiningSection />
+      {/* <DiningSection /> */}
       <AmenitiesSection />
       <BookingSection />
       <TestimonialsSection />
@@ -30,7 +30,7 @@ const HeroSection = () => {
       {/* Background with gradient */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/p1.jpg')" }}
+        style={{ backgroundImage: "url('/images/home.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
@@ -174,24 +174,27 @@ const RoomsSection = () => {
   const rooms = [
     {
       id: "deluxe",
-      name: "Deluxe Suite",
-      description: "Cozy elegance with premium amenities and city views",
-      price: 299,
-      image: "/images/hero.jpg",
+      name: "Royale room",
+      description:
+        "Indulge in the epitome of luxury and sophistication in our Royale Room. With its exquisite design and unrivaled comfort, this room is designed to make your stay truly exceptional.",
+      price: "30,000",
+      image: "/images/p1.jpg",
     },
     {
       id: "executive",
-      name: "Executive Suite",
-      description: "Modern technology meets sophisticated comfort",
-      price: 499,
-      image: "/images/hero.jpg",
+      name: " Deluxe room",
+      description:
+        "Experience utmost comfort and style in our Deluxe Room. Thoughtfully designed with your relaxation in mind, this room offers a perfect blend of modern amenities and a soothing ambiance.",
+      price: "28,000",
+      image: "/images/ui.jpeg",
     },
     {
       id: "presidential",
-      name: "Presidential Suite",
-      description: "Opulent grandeur for the most discerning guests",
-      price: 999,
-      image: "/images/hero.jpg",
+      name: "Studio room",
+      description:
+        "Welcome to our cozy and functional Studio Room. Designed for the modern traveler, this room offers a comfortable and efficient space to relax, work, and recharge",
+      price: "10,000",
+      image: "/images/studio.jpg",
     },
   ];
 
@@ -221,7 +224,7 @@ const RoomsSection = () => {
                 ></div>
                 <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
                   <span className="text-white text-sm font-medium">
-                    ${room.price}/night
+                    ₦{room.price}/night
                   </span>
                 </div>
               </div>
@@ -232,10 +235,10 @@ const RoomsSection = () => {
                 <p className="text-gray-600 mb-4">{room.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-bold text-blue-900">
-                    ${room.price}/night
+                    ₦{room.price}/night
                   </span>
                   <button className="px-4 py-2 rounded-full bg-blue-900 text-white hover:bg-blue-800 transition-colors">
-                    View Details
+                    Book Now
                   </button>
                 </div>
               </div>
@@ -243,101 +246,101 @@ const RoomsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300">
             View All Rooms
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
 };
 
 // Dining Section
-const DiningSection = () => {
-  const restaurants = [
-    {
-      name: "The Golden Spoon",
-      cuisine: "Fine Dining",
-      description: "Michelin-starred cuisine with panoramic city views",
-      hours: "6:00 PM - 11:00 PM",
-      icon: "🍽️",
-      image: "/images/hero.jpg",
-    },
-    {
-      name: "Azure Lounge",
-      cuisine: "Contemporary",
-      description: "Sophisticated cocktails and light bites",
-      hours: "4:00 PM - 2:00 AM",
-      icon: "🍸",
-      image: "/images/hero.jpg",
-    },
-    {
-      name: "Garden Terrace",
-      cuisine: "International",
-      description: "Al fresco dining with garden views",
-      hours: "7:00 AM - 10:00 PM",
-      icon: "🌿",
-      image: "/images/hero.jpg",
-    },
-  ];
+// const DiningSection = () => {
+//   const restaurants = [
+//     {
+//       name: "The Golden Spoon",
+//       cuisine: "Fine Dining",
+//       description: "Michelin-starred cuisine with panoramic city views",
+//       hours: "6:00 PM - 11:00 PM",
+//       icon: "🍽️",
+//       image: "/images/hero.jpg",
+//     },
+//     {
+//       name: "Azure Lounge",
+//       cuisine: "Contemporary",
+//       description: "Sophisticated cocktails and light bites",
+//       hours: "4:00 PM - 2:00 AM",
+//       icon: "🍸",
+//       image: "/images/hero.jpg",
+//     },
+//     {
+//       name: "Garden Terrace",
+//       cuisine: "International",
+//       description: "Al fresco dining with garden views",
+//       hours: "7:00 AM - 10:00 PM",
+//       icon: "🌿",
+//       image: "/images/hero.jpg",
+//     },
+//   ];
 
-  return (
-    <section id="dining" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-            Culinary Excellence
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Embark on a gastronomic journey with our world-class dining
-            experiences, crafted by renowned chefs using the finest ingredients.
-          </p>
-        </div>
+//   return (
+//     <section id="dining" className="py-20 bg-gray-50">
+//       <div className="max-w-7xl mx-auto px-6">
+//         <div className="text-center mb-16">
+//           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+//             Culinary Excellence
+//           </h2>
+//           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+//             Embark on a gastronomic journey with our world-class dining
+//             experiences, crafted by renowned chefs using the finest ingredients.
+//           </p>
+//         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {restaurants.map((restaurant, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <div className="aspect-video relative">
-                <div
-                  className="w-full h-full  flex items-center justify-center bg-cover bg-center"
-                  style={{ backgroundImage: `url(${restaurant.image})` }}
-                >
-                  <div className="text-center text-white">
-                    <div className="text-5xl mb-2">{restaurant.icon}</div>
-                    <div className="text-lg font-semibold">
-                      {restaurant.cuisine}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-blue-900 mb-2">
-                  {restaurant.name}
-                </h3>
-                <p className="text-yellow-500 font-semibold mb-3">
-                  {restaurant.cuisine}
-                </p>
-                <p className="text-gray-600 mb-4">{restaurant.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">
-                    {restaurant.hours}
-                  </span>
-                  <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
-                    Reserve
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+//           {restaurants.map((restaurant, index) => (
+//             <div
+//               key={index}
+//               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+//             >
+//               <div className="aspect-video relative">
+//                 <div
+//                   className="w-full h-full  flex items-center justify-center bg-cover bg-center"
+//                   style={{ backgroundImage: `url(${restaurant.image})` }}
+//                 >
+//                   <div className="text-center text-white">
+//                     <div className="text-5xl mb-2">{restaurant.icon}</div>
+//                     <div className="text-lg font-semibold">
+//                       {restaurant.cuisine}
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//               <div className="p-6">
+//                 <h3 className="text-2xl font-bold text-blue-900 mb-2">
+//                   {restaurant.name}
+//                 </h3>
+//                 <p className="text-yellow-500 font-semibold mb-3">
+//                   {restaurant.cuisine}
+//                 </p>
+//                 <p className="text-gray-600 mb-4">{restaurant.description}</p>
+//                 <div className="flex justify-between items-center">
+//                   <span className="text-sm text-gray-500">
+//                     {restaurant.hours}
+//                   </span>
+//                   <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
+//                     Reserve
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 
 // Amenities Section
 const AmenitiesSection = () => {
@@ -346,34 +349,30 @@ const AmenitiesSection = () => {
       id: "spa",
       name: "Luxury Spa",
       description: "Rejuvenating treatments and wellness therapies",
-      icon: "🧘‍♀️",
-      gradient: "bg-gradient-to-br from-pink-400 to-purple-600",
+      image: "/images/p4.jpg",
     },
     {
       id: "pool",
       name: "Infinity Pool",
       description: "Rooftop pool with panoramic city views",
-      icon: "🏊‍♂️",
-      gradient: "bg-gradient-to-br from-cyan-400 to-blue-600",
+      image: "/images/p5.jpg",
     },
     {
       id: "fitness",
       name: "Fitness Center",
       description: "State-of-the-art equipment and personal training",
-      icon: "💪",
-      gradient: "bg-gradient-to-br from-red-500 to-orange-600",
+      image: "/images/rst.jpg",
     },
     {
       id: "business",
       name: "Business Center",
       description: "Professional facilities for business travelers",
-      icon: "💼",
-      gradient: "bg-gradient-to-br from-gray-600 to-slate-700",
+      image: "/images/top.jpg",
     },
   ];
 
   return (
-    <section id="amenities" className="py-20 bg-white">
+    <section id="amenities" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
@@ -393,12 +392,9 @@ const AmenitiesSection = () => {
             >
               <div className="aspect-video relative">
                 <div
-                  className={`w-full h-full ${amenity.gradient} flex items-center justify-center`}
-                >
-                  <div className="text-center text-white">
-                    <div className="text-5xl mb-2">{amenity.icon}</div>
-                  </div>
-                </div>
+                  className="w-full h-full bg-cover bg-center"
+                  style={{ backgroundImage: `url(${amenity.image})` }}
+                ></div>
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">
@@ -410,11 +406,11 @@ const AmenitiesSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300">
             Explore All Amenities
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -640,11 +636,11 @@ const ContactSection = () => {
                     Address
                   </h3>
                   <p className="text-gray-600 whitespace-pre-line">
-                    123 Luxury Boulevard
+                    Area 1, 9 argungu close,
                     <br />
-                    Downtown District
+                    off Benue Cres,
                     <br />
-                    New York, NY 10001
+                    Garki, Abuja
                   </p>
                 </div>
               </div>
@@ -658,7 +654,9 @@ const ContactSection = () => {
                     Phone
                   </h3>
                   <p className="text-gray-600 whitespace-pre-line">
-                    +1 (555) 123-4567
+                    +234 703 944 8131
+                    <br />
+                    +234 703 590 1868
                     <br />
                     24/7 Concierge
                   </p>

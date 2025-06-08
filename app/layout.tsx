@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Power Mike Hotel Abuja | Luxury Suites & Comfort",
     description:
-      "Discover luxury at Power Mike Hotel in Abuja. Book now for premium suites, fine dining, and spa services in Nigeria’s capital.",
+      "We are established to provide excellent hospitality services to prospective clients families, individuals, coporate organization.",
     images: [
       {
-        url: "https://powermikehotel.com.ng/img/land/p1.jpg",
+        url: "https://powermikehotel.com.ng/images/p4.jpg",
         width: 1200,
         height: 630,
         alt: "Power Mike Hotel Abuja luxurious suite",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Power Mike Hotel Abuja | Luxury Suites & Comfort",
     description:
       "Discover luxury at Power Mike Hotel in Abuja. Book now for premium suites, fine dining, and spa services.",
-    images: ["https://powermikehotel.com.ng/img/land/p1.jpg"],
+    images: ["https://powermikehotel.com.ng/images/p4.jpg"],
   },
   other: {
     "application/ld+json": JSON.stringify({
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
         ratingValue: "4.8",
         bestRating: "5",
       },
-      image: "https://powermikehotel.com.ng/img/land/p1.jpg",
+      image: "https://powermikehotel.com.ng/images/p4.jpg",
       description:
         "Power Mike Hotel offers luxury accommodation in Abuja with premium suites, fine dining, spa services, and exceptional hospitality in Nigeria’s capital.",
       url: "https://powermikehotel.com.ng",
