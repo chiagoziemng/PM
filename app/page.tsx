@@ -11,8 +11,6 @@ export default function Home() {
       <HeroSection />
       <OverviewSection />
       <RoomsSection />
-      {/* <DiningSection /> */}
-      <AmenitiesSection />
       <BookingSection />
       <TestimonialsSection />
       <ContactSection />
@@ -46,7 +44,7 @@ const HeroSection = () => {
               destinations
             </p>
             <button
-              onClick={() => setShowOverview(true)}
+              // onClick={() => setShowOverview(true)}
               className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Discover Excellence
@@ -121,11 +119,10 @@ const OverviewSection = () => {
               <span className="text-2xl">🏆</span>
             </div>
             <h3 className="text-xl font-semibold text-blue-900 mb-3">
-              Global Excellence
+              Luxury and Trust Angle
             </h3>
-            <p className="text-gray-600">
-              Award-winning service recognized worldwide
-            </p>
+
+            <p className="text-gray-600">High-level service and distinction</p>
           </div>
 
           <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -256,166 +253,6 @@ const RoomsSection = () => {
   );
 };
 
-// Dining Section
-// const DiningSection = () => {
-//   const restaurants = [
-//     {
-//       name: "The Golden Spoon",
-//       cuisine: "Fine Dining",
-//       description: "Michelin-starred cuisine with panoramic city views",
-//       hours: "6:00 PM - 11:00 PM",
-//       icon: "🍽️",
-//       image: "/images/hero.jpg",
-//     },
-//     {
-//       name: "Azure Lounge",
-//       cuisine: "Contemporary",
-//       description: "Sophisticated cocktails and light bites",
-//       hours: "4:00 PM - 2:00 AM",
-//       icon: "🍸",
-//       image: "/images/hero.jpg",
-//     },
-//     {
-//       name: "Garden Terrace",
-//       cuisine: "International",
-//       description: "Al fresco dining with garden views",
-//       hours: "7:00 AM - 10:00 PM",
-//       icon: "🌿",
-//       image: "/images/hero.jpg",
-//     },
-//   ];
-
-//   return (
-//     <section id="dining" className="py-20 bg-gray-50">
-//       <div className="max-w-7xl mx-auto px-6">
-//         <div className="text-center mb-16">
-//           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-//             Culinary Excellence
-//           </h2>
-//           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-//             Embark on a gastronomic journey with our world-class dining
-//             experiences, crafted by renowned chefs using the finest ingredients.
-//           </p>
-//         </div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-//           {restaurants.map((restaurant, index) => (
-//             <div
-//               key={index}
-//               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-//             >
-//               <div className="aspect-video relative">
-//                 <div
-//                   className="w-full h-full  flex items-center justify-center bg-cover bg-center"
-//                   style={{ backgroundImage: `url(${restaurant.image})` }}
-//                 >
-//                   <div className="text-center text-white">
-//                     <div className="text-5xl mb-2">{restaurant.icon}</div>
-//                     <div className="text-lg font-semibold">
-//                       {restaurant.cuisine}
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="p-6">
-//                 <h3 className="text-2xl font-bold text-blue-900 mb-2">
-//                   {restaurant.name}
-//                 </h3>
-//                 <p className="text-yellow-500 font-semibold mb-3">
-//                   {restaurant.cuisine}
-//                 </p>
-//                 <p className="text-gray-600 mb-4">{restaurant.description}</p>
-//                 <div className="flex justify-between items-center">
-//                   <span className="text-sm text-gray-500">
-//                     {restaurant.hours}
-//                   </span>
-//                   <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
-//                     Reserve
-//                   </button>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// Amenities Section
-const AmenitiesSection = () => {
-  const amenities = [
-    {
-      id: "spa",
-      name: "Luxury Spa",
-      description: "Rejuvenating treatments and wellness therapies",
-      image: "/images/p4.jpg",
-    },
-    {
-      id: "pool",
-      name: "Infinity Pool",
-      description: "Rooftop pool with panoramic city views",
-      image: "/images/p5.jpg",
-    },
-    {
-      id: "fitness",
-      name: "Fitness Center",
-      description: "State-of-the-art equipment and personal training",
-      image: "/images/rst.jpg",
-    },
-    {
-      id: "business",
-      name: "Business Center",
-      description: "Professional facilities for business travelers",
-      image: "/images/top.jpg",
-    },
-  ];
-
-  return (
-    <section id="amenities" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-            World-Class Amenities
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Indulge in our comprehensive range of luxury amenities designed to
-            enhance your stay and provide unparalleled comfort and convenience.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {amenities.map((amenity) => (
-            <div
-              key={amenity.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <div className="aspect-video relative">
-                <div
-                  className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: `url(${amenity.image})` }}
-                ></div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-blue-900 mb-3">
-                  {amenity.name}
-                </h3>
-                <p className="text-gray-600">{amenity.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* <div className="text-center mt-12">
-          <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300">
-            Explore All Amenities
-          </button>
-        </div> */}
-      </div>
-    </section>
-  );
-};
-
 // Booking Section
 const BookingSection = () => {
   return (
@@ -477,20 +314,26 @@ const BookingSection = () => {
                   <label className="block text-sm font-medium mb-2">
                     Room Type
                   </label>
-                  <select className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white">
-                    <option value="deluxe">Deluxe Suite - $299/night</option>
+                  <select className="w-full px-4 py-3 bg-gray/80 border border-white/30 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white">
+                    <option value="deluxe">Royale Suite - ₦30,000/night</option>
                     <option value="executive">
-                      Executive Suite - $499/night
+                      Deluxe Suite - ₦28,000/night
                     </option>
                     <option value="presidential">
-                      Presidential Suite - $999/night
+                      Studio Suite - ₦10,000/night
                     </option>
                   </select>
                 </div>
               </div>
 
               <button
-                type="submit"
+                type="button"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/+2347039448131?text=Hello%2C%20I%27m%20interested%20in%20checking%20the%20availability%20of%20the%20Royal%20Room",
+                    "_blank"
+                  )
+                }
                 className="w-full bg-yellow-500 hover:bg-yellow-400 text-blue-900 py-4 rounded-lg text-lg font-semibold transition-colors"
               >
                 Check Availability
@@ -515,9 +358,7 @@ const BookingSection = () => {
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
                       <span className="text-blue-900 font-bold">✓</span>
                     </div>
-                    <span>
-                      Complimentary Room Upgrade (Subject to Availability)
-                    </span>
+                    <span>Complimentary Room Breakfast</span>
                   </li>
                   <li className="flex items-center">
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
@@ -546,13 +387,13 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       text: "An extraordinary experience that exceeded all expectations. The attention to detail and personalized service made our stay unforgettable.",
-      author: "James Wilson",
+      author: "Chinedu Obianuju",
       position: "CEO, Global Enterprises",
       gradient: "bg-gradient-to-br from-blue-500 to-purple-600",
     },
     {
       text: "The epitome of luxury hospitality. From the moment we arrived, we were treated like royalty. Will definitely return.",
-      author: "Sarah Johnson",
+      author: "Tolulope",
       position: "Travel Blogger",
       gradient: "bg-gradient-to-br from-yellow-500 to-orange-600",
     },
