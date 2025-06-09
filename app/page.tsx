@@ -174,16 +174,16 @@ const RoomsSection = () => {
       name: "Royale room",
       description:
         "Indulge in the epitome of luxury and sophistication in our Royale Room. With its exquisite design and unrivaled comfort, this room is designed to make your stay truly exceptional.",
-      price: "30,000",
-      image: "/images/p1.jpg",
+      price: "28,000",
+      image: "/images/ui.jpeg",
     },
     {
       id: "executive",
       name: " Deluxe room",
       description:
         "Experience utmost comfort and style in our Deluxe Room. Thoughtfully designed with your relaxation in mind, this room offers a perfect blend of modern amenities and a soothing ambiance.",
-      price: "28,000",
-      image: "/images/ui.jpeg",
+      price: "25,000",
+      image: "/images/p1.jpg",
     },
     {
       id: "presidential",
@@ -234,9 +234,14 @@ const RoomsSection = () => {
                   <span className="text-2xl font-bold text-blue-900">
                     ₦{room.price}/night
                   </span>
-                  <button className="px-4 py-2 rounded-full bg-blue-900 text-white hover:bg-blue-800 transition-colors">
+                  <a
+                    href="https://wa.me/+2347039448131?text=Hello%2C%20I%27m%20interested%20in%20booking%20a%20Room"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-full bg-blue-900 text-white hover:bg-blue-800 transition-colors text-center"
+                  >
                     Book Now
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -330,7 +335,7 @@ const BookingSection = () => {
                 type="button"
                 onClick={() =>
                   window.open(
-                    "https://wa.me/+2347039448131?text=Hello%2C%20I%27m%20interested%20in%20checking%20the%20availability%20of%20the%20Royal%20Room",
+                    "https://wa.me/+2347039448131?text=Hello%2C%20I%27m%20interested%20in%20checking%20the%20availability%20of%20Rooms",
                     "_blank"
                   )
                 }
@@ -452,6 +457,30 @@ const TestimonialsSection = () => {
 
 // Contact Section
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = () => {
+    const message = `Name: ${formData.fullName}\nEmail: ${
+      formData.email
+    }\nSubject: ${formData.subject || "No subject"}\nMessage: ${
+      formData.message
+    }`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(
+      `https://wa.me/+2347039448131?text=${encodedMessage}`,
+      "_blank"
+    );
+  };
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -479,7 +508,7 @@ const ContactSection = () => {
                   <p className="text-gray-600 whitespace-pre-line">
                     Area 1, 9 argungu close,
                     <br />
-                    off Benue Cres,
+                    off Benue Crescent,
                     <br />
                     Garki, Abuja
                   </p>
@@ -517,11 +546,11 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
-                  5 minutes from Central Station
+                  5 minutes from Central Business Area
                 </div>
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
-                  10 minutes from Financial District
+                  10 minutes from three arms zone
                 </div>
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
@@ -536,7 +565,7 @@ const ContactSection = () => {
               Send us a Message
             </h3>
 
-            <form className="space-y-6">
+            {/* <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Full Name
@@ -586,6 +615,76 @@ const ContactSection = () => {
 
               <button
                 type="submit"
+                className="w-full bg-blue-900 text-white py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition-colors"
+              >
+                Send Message
+              </button>
+            </form> */}
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Subject
+                </label>
+                <select
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                >
+                  <option value="">Select a subject</option>
+                  <option value="reservation">Reservation Inquiry</option>
+                  <option value="event">Event Planning</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  rows={6}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent resize-none"
+                  placeholder="Tell us how we can assist you..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="button"
+                onClick={handleSubmit}
                 className="w-full bg-blue-900 text-white py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition-colors"
               >
                 Send Message
